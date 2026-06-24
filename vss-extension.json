@@ -1,0 +1,67 @@
+{
+  "manifestVersion": 1,
+  "id": "ado-inkwell-md",
+  "name": "inkwell.md for Azure DevOps Wiki",
+  "version": "0.1.0",
+  "publisher": "jhofer",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Rich markdown editor with PlantUML, tables, and full inkwell.md capabilities for Azure DevOps Wiki.",
+  "public": false,
+  "categories": ["Azure DevOps"],
+  "tags": ["wiki", "markdown", "editor", "plantuml", "rich text"],
+  "icons": {
+    "default": "images/icon.png"
+  },
+  "contributions": [
+    {
+      "id": "inkwell-wiki-hub",
+      "type": "ms.vss-web.hub",
+      "description": "Open the inkwell.md rich markdown editor for a wiki page.",
+      "targets": ["ms.vss-wiki-web.wiki-hub-group"],
+      "properties": {
+        "name": "inkwell.md",
+        "order": 100,
+        "uri": "dist/hub/index.html",
+        "icon": {
+          "light": "images/icon.png",
+          "dark": "images/icon.png"
+        },
+        "supportsMobile": false
+      }
+    },
+    {
+      "id": "inkwell-toolbar-action",
+      "type": "ms.vss-web.action",
+      "description": "Open the current wiki page in inkwell.md editor.",
+      "targets": ["ms.vss-wiki-web.wiki-page-toolbar-menu-item"],
+      "properties": {
+        "text": "Edit with inkwell.md",
+        "title": "Open in inkwell.md rich editor (with PlantUML support)",
+        "icon": "images/icon.png",
+        "groupId": "actions",
+        "uri": "dist/toolbar/index.html"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "images",
+      "addressable": true
+    }
+  ],
+  "scopes": [
+    "vso.wiki",
+    "vso.wiki_write",
+    "vso.profile"
+  ],
+  "baseUri": "",
+  "demands": []
+}
