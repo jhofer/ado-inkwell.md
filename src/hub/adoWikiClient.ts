@@ -28,7 +28,7 @@ async function getOrgUrl(): Promise<string> {
 }
 
 /**
- * Returns a ****** that can be used for ADO REST API calls.
+ * Returns authentication headers that can be used for ADO REST API calls.
  */
 async function getBearerHeaders(): Promise<Record<string, string>> {
   const token = await SDK.getAccessToken();

@@ -147,7 +147,7 @@ interface EditorTarget {
  * Top-level component for the inkwell.md ADO Wiki hub contribution.
  *
  * Lifecycle:
- *  1. Initialise the ADO Extension SDK.
+ *  1. Initialize the ADO Extension SDK.
  *  2. Read navigation params from the URL hash (set by the toolbar action or
  *     manual navigation).
  *  3. If params are present, show the editor immediately.
