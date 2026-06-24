@@ -1,0 +1,38 @@
+{
+  "name": "ado-inkwell-md",
+  "version": "0.1.0",
+  "description": "inkwell.md rich markdown editor for Azure DevOps Wiki",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
+    "package": "npm run build && tfx extension create --manifest-globs vss-extension.json"
+  },
+  "dependencies": {
+    "azure-devops-extension-api": "^5.273.0",
+    "azure-devops-extension-sdk": "^4.2.0",
+    "inkwell-md": "github:jhofer/vscode-markdown-editor",
+    "pako": "^2.1.0",
+    "prettier": "^2.8.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "@types/pako": "^2.0.3",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@types/styled-components": "^5.1.7",
+    "css-loader": "^6.7.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.0",
+    "tfx-cli": "^0.16.0",
+    "ts-loader": "^9.4.0",
+    "typescript": "^4.9.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
